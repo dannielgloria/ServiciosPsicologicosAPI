@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
-    "start-2": "npm run babel-node src/index.js",
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src",
+    "start": "npm run babel-node src/index.js",
     "dev": "nodemon --exec npm run babel-node src/index.js"
   },
   "author": "Anahí García Soria",
