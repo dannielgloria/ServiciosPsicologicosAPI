@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import severless from "serverless-http";
 
 import infoServicesRoutes from "./routes/InfoServices.routes";
 
@@ -11,7 +12,7 @@ app.set('port',8000);
 app.use(morgan("dev"));
 app.use(express.json());
 
-/* Root Endpoint */
+
 
 
 app.use("/api-restful/infoServices",infoServicesRoutes);
@@ -19,3 +20,4 @@ app.use("/api-restful/infoServices",infoServicesRoutes);
 
 
 export default app;
+module.exports.handlers= severless(app);
