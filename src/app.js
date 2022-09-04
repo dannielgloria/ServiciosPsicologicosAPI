@@ -6,7 +6,9 @@ import infoServicesRoutes from "./routes/InfoServices.routes";
 
 const app = express();
 
-app.set('port',8000);
+const port = process.env.PORT || 5000;
+
+app.set('port',port);
 
 /*Milddwares*/
 app.use(morgan("dev"));
