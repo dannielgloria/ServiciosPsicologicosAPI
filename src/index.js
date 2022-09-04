@@ -1,8 +1,8 @@
 import app from "./app"
 
 const main = () =>{
-    const port= app.listen(app.get('port'));//se actualizó
-    console.log('Server on port :8000');
+    app.listen(app.get('port'));
+    console.log(`Server on port ${app.get('port')}`);
 };
 
 main();
